@@ -1,0 +1,39 @@
+/*
+Colors used
+
+Text (White): #fff
+Primary Color  (Dark Gray): #282828;
+Secondary Color (Slighty Lighter Grey): #393939;
+Middle Color (Middle Dark grey): #2f2f2f;
+ */
+
+ body {
+    line-height: 1;
+    color: white;
+    background: #3a3a3a ;
+  }
+
+  header,
+  footer {
+    line-height: 1;
+    color: white;
+    background: #2f2f2f ;
+    display: flex;
+    align-content: space-around;
+  }
+
+a {
+  text-decoration: none;
+}
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
