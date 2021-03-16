@@ -1,0 +1,88 @@
+/*
+Colors used
+
+Text (White): #fff
+Primary Color  (Dark Gray): #282828;
+Secondary Color (Slighty Lighter Grey): #393939;
+Middle Color (Middle Dark grey): #2f2f2f;
+ */
+
+ body {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    font-size: 16;
+    line-height: 1.6;
+    color: white;
+    background: #3a3a3a ;
+  }
+
+  header {
+    background: #c9c9c9 ;
+    font-weight: 400;
+    font-size: 16;
+    line-height: 1.6;
+  }
+
+  footer {
+    font-weight: 400;
+    font-size: 16;
+    line-height: 1;
+    color: white;
+    background: #2f2f2f ;
+    display: flex;
+    align-content: space-around;
+  }
+
+a {
+  text-decoration: none;
+  color: #357b70;
+}
+
+a:visited {
+  /* visited link */
+  color: #05676e;
+}
+
+a:hover,  a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: #489c79;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  }
+
+  button:hover, button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .button__secondary {
+    background-color: #e0b354;
+    color: #2b2b2b;
+  }
+  
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
