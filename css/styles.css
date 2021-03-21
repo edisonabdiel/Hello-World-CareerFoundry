@@ -58,11 +58,10 @@ header {
   text-align: right;
 }
 
-.navigation-list {
+.navigation-list,
+.about li {
   list-style-type: none;
 }
-
-.navigation-list__item {}
 
 #header_link {
   color: #90a8a3;
@@ -73,33 +72,12 @@ header {
   margin-left: 15px;
 }
 
-.main{
+.main {
   max-width: 700px;
   min-height: 500px;
   margin: 0 auto;
   padding: 110px;
 }
-
-/* .profile {
-  max-width: 700px;
-  min-height: 500px;
-  margin: 0 auto;
-  padding: 110px;
-}
-
-.about {
-  max-width: 700px;
-  min-height: 500px;
-  margin: 0 auto;
-  padding: 110px;
-}
-
-.contact {
-  max-width: 700px;
-  min-height: 500px;
-  margin: 0 auto;
-  padding: 110px;
-} */
 
 .profile__portrait {
   float: left;
@@ -140,6 +118,78 @@ header {
     grid-column: 3 / 3;
     grid-row: 1 / 3;
   }
+}
+
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+
+  .project-list__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 footer {
@@ -338,8 +388,10 @@ a:active {
   color: #e0b354;
 }
 
-button {
+button,
+.button {
   border: none;
+  display: inline-block;
   font-family: inherit;
   background-color: #357b70;
   color: white;
@@ -347,10 +399,14 @@ button {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
 
 button:hover,
-button:focus {
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
