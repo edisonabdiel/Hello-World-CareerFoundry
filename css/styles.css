@@ -11,6 +11,7 @@ Middle Color (Middle Dark grey): #2f2f2f;
   box-sizing: border-box;
 }
 
+
 :root {
   --primary-color: #90a8a3;
   --secondary-color: #e0b354;
@@ -62,6 +63,7 @@ header {
 
 .header-logo span {
   color: var(--secondary-color);
+
 }
 
 .page-header__item:last-child {
@@ -76,6 +78,7 @@ header {
 
 #header_link {
   color: var(--primary-color);
+
 }
 
 .navigation-list li {
