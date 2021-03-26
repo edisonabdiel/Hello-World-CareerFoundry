@@ -7,16 +7,23 @@ Secondary Color (Slighty Lighter Grey): #393939;
 Middle Color (Middle Dark grey): #2f2f2f;
  */
 
-* {
+ * {
   box-sizing: border-box;
 }
 
 :root {
   --primary-color: #90a8a3;
   --secondary-color: #e0b354;
+  --white: #fff;
+  --black: #000;
+  --font-grey: #92999f;
+  --icon-background-grey:#33383b;
   --visited-link-color: #05676e;
   --dark-grey: #292c2f;
-  --lighter-dark-grey: #3a3a3a;
+  --lighter-dark-grey: #2d3234;
+  --sun-0: #edc655;
+  --sun-50: #fcffad;
+  --sun-100: #f76414;
   --primary-font-weight: 400;
   --primary-font-size: 16px;
   --primary-font-height: 1.6;
@@ -27,7 +34,7 @@ body {
   font-weight: var(--primary-font-weight);
   font-size: var(--primary-font-size);
   line-height: var(--primary-font-height);
-  color: white;
+  color: var(--white);
   background: var(--lighter-dark-grey);
   flex: 1 1 auto;
   position: relative;
@@ -37,11 +44,12 @@ body {
 
 header {
   background: var(--dark-grey);
-  color: #fff;
+  color: var(--white);
   font-weight: var(--primary-font-weight);
   font-size: var(--primary-font-size);
   line-height: var(--primary-font-height);
   flex: 0 0 auto;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .page-header {
@@ -55,9 +63,10 @@ header {
 }
 
 .header-logo h3 {
-  color: #fff;
+  color: var(--white);
   font: normal 36px 'Cookie', cursive;
   margin: 0;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .header-logo span {
@@ -87,7 +96,10 @@ header {
   max-width: 700px;
   min-height: 500px;
   margin: 0 auto;
-  padding: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('assets/Edison-Abdiel.svg');
 }
 
 .about {
@@ -99,8 +111,10 @@ header {
 .profile__portrait {
   float: left;
   width: 150px;
-  margin-right: 40px;
+  height: 150px;
   border-radius: 50%;
+  margin-top: 100px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .project-list {
@@ -113,9 +127,14 @@ header {
 /* start grid fallback */
 .project__item {
   display: inline-block;
-  background-color: lightgray;
+  background-color: var(--dark-grey);
   width: auto;
   min-height: auto;
+}
+
+.project__item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 @supports (display: grid) {
@@ -128,7 +147,7 @@ header {
   }
 
   .project__item {
-    background-color: lightgray;
+    background-color: var(--dark-grey);
     width: auto;
     min-height: auto;
     margin: 0;
@@ -174,15 +193,15 @@ header {
 
 @keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--sun-0);
   }
 
   50% {
-    fill: #fcffad;
+    fill: var(--sun-50);
   }
 
   100% {
-    fill: #f76414;
+    fill: var(--sun-100);
   }
 }
 
@@ -222,8 +241,9 @@ footer {
   font-weight: 400;
   font-size: 16;
   line-height: 1;
-  color: white;
+  color: var(--white);
   background: var(--dark-grey);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .footer-distributed {
@@ -249,7 +269,7 @@ footer {
 }
 
 .footer-distributed .footer-links {
-  color: #fff;
+  color: var(--white);
   margin: 20px 0 12px;
   padding: 0;
 }
@@ -262,7 +282,7 @@ footer {
 }
 
 .footer-distributed .footer-company-name {
-  color: #8f9296;
+  color: var(--font-grey);
   font-size: 14px;
   font-weight: normal;
   margin: 0;
@@ -274,8 +294,8 @@ footer {
 }
 
 .footer-distributed .footer-center i {
-  background-color: #33383b;
-  color: #fff;
+  background-color: var(--icon-background-grey);
+  color: var(--white);
   font-size: 25px;
   width: 38px;
   height: 38px;
@@ -293,13 +313,13 @@ footer {
 
 .footer-distributed .footer-center p {
   display: inline-block;
-  color: #fff;
+  color: var(--white);
   vertical-align: middle;
   margin: 0;
 }
 
 .footer-distributed h3 {
-  color: #fff;
+  color: var(--white);
   font: normal 36px 'Oswald', cursive;
   margin: 0;
 }
@@ -326,7 +346,7 @@ footer {
 
 .footer-distributed .footer-company-about {
   line-height: 20px;
-  color: #92999f;
+  color: var(--font-grey);
   font-size: 13px;
   font-weight: normal;
   margin: 0;
@@ -334,7 +354,7 @@ footer {
 
 .footer-distributed .footer-company-about span {
   display: block;
-  color: #fff;
+  color: var(--white);
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -349,11 +369,11 @@ footer {
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color: #33383b;
+  background-color: var(--icon-background-grey);
   border-radius: 2px;
 
   font-size: 20px;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   line-height: 35px;
 
@@ -419,8 +439,8 @@ button,
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: #357b70;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--white);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
