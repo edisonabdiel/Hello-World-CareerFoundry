@@ -7,7 +7,7 @@ Secondary Color (Slighty Lighter Grey): #393939;
 Middle Color (Middle Dark grey): #2f2f2f;
  */
 
- * {
+* {
   box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ Middle Color (Middle Dark grey): #2f2f2f;
   --secondary-color: #e0b354;
   --white: #fff;
   --font-grey: #92999f;
-  --icon-background-grey:#33383b;
+  --icon-background-grey: #33383b;
   --visited-link-color: #05676e;
   --dark-grey: #000;
   --lighter-dark-grey: #2d3234;
@@ -98,13 +98,13 @@ header {
   align-items: center;
 }
 
-.text-container{
+.text-container {
   height: 13px;
   width: 666px;
   margin-bottom: 150px;
 }
 
-.berlin-illustration{
+.berlin-illustration {
   width: 666px;
 }
 
@@ -254,7 +254,7 @@ header {
 
 footer {
   font-weight: 400;
-  font-size: 16;
+  font-size: 16px;
   line-height: 1;
   color: var(--white);
   background: var(--dark-grey);
@@ -385,7 +385,7 @@ footer {
   width: 35px;
   height: 35px;
   cursor: pointer;
-  background-color: var(--white);;
+  background-color: var(--white);
   border-radius: 5px;
   transition-duration: 0.2s;
   transition-property: opacity;
