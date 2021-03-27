@@ -49,12 +49,12 @@
                 Email: <a href="mailto:the.edison.masis@gmail.com">the.edison.masis@gmail.com</a>
                 <div>
                     <a href="mailto:the.edison.masis@gmail.com">Contact me</a>
-                    <button type="button"> First Button </button>
-                    <button class="button__secondary"> Second Button </button>
+                    <!-- <button type="button"> First Button </button>
+                    <button class="button__secondary"> Second Button </button> -->
                 </div>
             </div>
             <div>
-                <form action="https://placeholder.com/" method="post">
+                <form action="https://placeholder.com/" class="contact-form" method="post">
                     <label for="contact-email">E-mail: </label>
                     <input type="email" id="contact-email" required>
                     <label for="telephone">Telephone: </label>
@@ -108,6 +108,13 @@
         </footer>
     </div>
     <script src="js/tota11y.min.js"></script>
+    <script type="text/javascript">
+        //auto expand textarea
+        function adjust_textarea(h) {
+            h.style.height = "20px";
+            h.style.height = (h.scrollHeight)+"px";
+        }
+        </script>
 </body>
 
 </html>
