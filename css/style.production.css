@@ -134,6 +134,8 @@ header {
   background-color: var(--dark-grey);
   width: auto;
   min-height: auto;
+  margin: 0;
+  padding: 20px;
 }
 
 @supports (display: grid) {
